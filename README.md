@@ -46,9 +46,6 @@ linkedlist\_flask/
 ├── linkedlist.py       # Singly Linked List logic
 ├── templates/
 │   └── index.html      # Webpage template
-├── static/
-│   └── style.css       # Custom CSS styling
-├── screenshots/        # Screenshot folder for README
 └── README.md           # Project documentation
 
 ```
