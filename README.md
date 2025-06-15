@@ -88,12 +88,12 @@ Open your browser and go to `http://127.0.0.1:5000`.
 
 ## ✅ Features in Action
 
-* 📥 **Insert at any position**
-* 🧹 **Delete from any position**
-* 👀 **Live list view on every update**
-* ⚠️ **Validation for out-of-range and empty list deletions**
-* 🔥 **Flash messages for all actions**
-* 🎨 **Modern and clean UI using plain CSS**
+*  **Insert at any position**
+*  **Delete from any position**
+*  **Live list view on every update**
+*  **Validation for out-of-range and empty list deletions**
+*  **Flash messages for all actions**
+*  **Modern and clean UI using plain CSS**
 
 ---
 
