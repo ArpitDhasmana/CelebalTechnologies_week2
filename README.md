@@ -48,3 +48,60 @@ linkedlist\_flask/
 │   └── style.css       # Custom CSS styling
 ├── screenshots/        # Screenshot folder for README
 └── README.md           # Project documentation
+
+
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/ArpitDhasmana/linkedlist-flask.git
+cd linkedlist-flask
+````
+
+### 2️⃣ (Optional) Create a Virtual Environment
+
+```bash
+python -m venv venv
+# Activate the virtual environment:
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
+pip install flask
+```
+
+### 4️⃣ Run the App
+
+```bash
+python app.py
+```
+
+Open your browser and go to `http://127.0.0.1:5000`.
+
+---
+
+## ✅ Features in Action
+
+* 📥 **Insert at any position**
+* 🧹 **Delete from any position**
+* 👀 **Live list view on every update**
+* ⚠️ **Validation for out-of-range and empty list deletions**
+* 🔥 **Flash messages for all actions**
+* 🎨 **Modern and clean UI using plain CSS**
+
+---
+
+
+## 🧾 License
+
+This project is licensed under the [MIT License](LICENSE).
