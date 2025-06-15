@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Singly Linked List</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .node {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 18px;
+      border-radius: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      transition: transform 0.2s;
+    }
+
+    .node:hover {
+      transform: scale(1.05);
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input, button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #007bff;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .messages {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .messages ul {
+      list-style: none;
+      padding: 0;
+      font-weight: bold;
+    }
+
+    .success {
+      color: green;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .length-badge {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #555;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Singly Linked List</h1>
+
+    <div class="length-badge">
+      Current Length: <strong>{{ length }}</strong> node{{ length != 1 and 's' or '' }}
+    </div>
+
+    <div class="messages">
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul>
+            {% for message in messages %}
+              <li class="{{ 'error' if 'Cannot' in message or 'range' in message else 'success' }}">{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+    </div>
+
+    <div class="list">
+      {% if not nodes %}
+        <p>The list is empty.</p>
+      {% else %}
+        {% for node in nodes %}
+          <span class="node">{{ node }}</span>
+        {% endfor %}
+        <span class="node" style="background:#28a745;">None</span>
+      {% endif %}
+    </div>
+
+    <div class="form-container">
+
+      <!-- Add at End -->
+      <form action="/add_end" method="post">
+        <input name="data" placeholder="Enter data to add at end" required>
+        <button type="submit">Add at End</button>
+      </form>
+
+      <!-- Add at Position -->
+      <form action="/add_at" method="post">
+        <input name="data" placeholder="Data to insert" required>
+        <input name="position" type="number" min="1"
+               placeholder="Position (1 to {{ length + 1 }})" required>
+        <button type="submit">Add at Position</button>
+      </form>
+
+      <!-- Delete at Position -->
+      {% if length > 0 %}
+      <form action="/delete_nth" method="post">
+        <input name="position" type="number" min="1"
+               placeholder="Position (1 to {{ length }})" required>
+        <button type="submit">Delete at Position</button>
+      </form>
+      {% else %}
+        <p style="text-align:center; color:red;">List is empty — nothing to delete!</p>
+      {% endif %}
+
+    </div>
+  </div>
+
+</body>
+</html>
