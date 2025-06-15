@@ -35,6 +35,8 @@ This is a beginner-friendly **Flask web application** that demonstrates the work
 
 ---
 
+
+```
 ## 📁 Project Structure
 
 
@@ -48,7 +50,6 @@ linkedlist\_flask/
 │   └── style.css       # Custom CSS styling
 ├── screenshots/        # Screenshot folder for README
 └── README.md           # Project documentation
-
 
 ```
 
