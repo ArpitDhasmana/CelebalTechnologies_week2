@@ -2,11 +2,11 @@
 
 This is a beginner-friendly **Flask web application** that demonstrates the working of a **Singly Linked List**. It provides an interactive interface to:
 
-- ✅ Add a node at the end  
-- ✅ Add a node at a specific position  
-- ✅ Delete a node at a specific position  
-- ✅ View the current state of the list  
-- ✅ See dynamic length and input position hints with validations  
+- Add a node at the end  
+- Add a node at a specific position  
+- Delete a node at a specific position  
+- View the current state of the list  
+- See dynamic length and input position hints with validations  
 
 ---
 
