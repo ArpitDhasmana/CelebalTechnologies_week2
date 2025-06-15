@@ -68,11 +68,9 @@ cd linkedlist-flask
 
 ```bash
 python -m venv venv
-# Activate the virtual environment:
-# On Windows:
+# Activate the virtual environment(Windows):
 venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
+
 ```
 
 ### 3️⃣ Install Dependencies
